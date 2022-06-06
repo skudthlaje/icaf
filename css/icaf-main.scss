@@ -1,77 +1,194 @@
 
-body {
-        margin: 0%;
-	width:1440px;
-}
-* {
-	box-sizing:border-box;
+/* General */
+
+.no-hpad {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#muralText {	  
-	   background-color:#134380;
-	   color:White;
-	   padding-left:20px;
- 	   padding:right:10px;
-	   padding-top:30px;
-	   padding-bottom:30px;   
-
-}
-#muralTextTitle {
-		color:#FFD743; 
-		text-align:center;
-		font-family:Nunito,sans-serif;
-		font-weight:semibold;
-		font-size:24pt; /* 16pt; */
+.flex-align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-li {
-    padding: 10px;
-    font-family:Nunito,sans-serif;
-    font-weight:regular;
-    font-size:18pt;
-    letter-spacing:1px;
-    word-spacing:2px;
-    line-height:1.4;
-}
-.donate {
-	text-align:center;
-}
-#donateLink {
-		background-color:#FFD743;
-		color:#134380;
-		border:none;
-		border-radius:25px;
-		padding-top:10px;
-		padding-bottom:10px;
-		padding-left:30px;
-		padding-right:30px;
-		font-weight:bold;
-		font-family:Nunito,sans-serif;	
-		font-size:14pt;	
-		letter-spacing:3px;
+.full-height {
+    height: 100%;
 }
 
-.row {
- 	width:100%;
-	
+body>.container {
+    max-width: 1440px;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: 'Nunito';
+    font-style: normal;
 }
 
-.column { 
-	  float:left;	
-	  height:921px;
-	}
-
-.left {
-	  width:60%;
-	  height:921px;
-}
-.right {
-	 width:40%;
-	 height:921px;
+.section-title {
+    color: #134380;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 14px 0;
 }
 
-.row:after {                      
-             clear: both;
-           }
+.section-description {
+    color: #134380;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 65px;
+    span {
+        width: 800px;
+    }
+}
 
 
+/* Section Specific */
+
+#videoContainer {
+    display: flex;
+    justify-content: center;
+    video {
+        width: 100%;
+    }
+    #volumeControl {
+        z-index: 10;
+        position: absolute;
+        bottom: -36%;
+        right: 8%;
+        display: none;
+        img {
+            width: 45px;
+            &:first-of-type {
+                display: none;
+            }
+        }
+    }
+}
+
+#whatWeDo {
+    width: 1290px;
+    margin: 0 auto;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 60px;
+        li {
+            float: left;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+            .card-img {
+                width: 300px;
+                height: 475px;
+                border-radius: 9px;
+            }
+            .card-link-wrapper {
+                position: absolute;
+                left: calc(50% - 90px);
+                top: 80%;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    div {
+                        width: 180px;
+                        height: 67px;
+                        background: #FFD743;
+                        border-radius: 37px;
+                        span {
+                            font-weight: 700;
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #134380;
+                            max-width: 130px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: #134380;
+    color: #ffffff;
+    .icaf-plug {
+        padding-top: 40px;
+        font-weight: 800;
+        font-size: 24px;
+        text-align: center;
+    }
+    .crypto-wrapper {
+        margin-left: 30px;
+        margin-top: 35px;
+        margin-bottom: 31px;
+    }
+    .newsletter {
+        text-align: end;
+        margin-top: 28px;
+        margin-right: 23px;
+        .sign-up {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        .email-input {
+            margin-top: 22px;
+            input {
+                border-radius: 9px 0px 0px 9px;
+                width: 380px;
+                height: 37px;
+            }
+            button {
+                font-weight: 700;
+                font-size: 12px;
+                color: #134380;
+                background: #ffd743;
+                border-radius: 0px 9px 9px 0px;
+                width: 56px;
+                height: 37px;
+                margin-left: -5px;
+            }
+        }
+    }
+    .footer-bottom {
+        height: 66px;
+        padding-left: 30px;
+        padding-right: 23px;
+        .deets {
+            text-align: end;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            margin-top: 5px;
+            a {
+                color: inherit;
+            }
+        }
+        .copyright {
+            text-align: end;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 15px;
+        }
+        *:not(.social-media) {
+            span~span::before,
+            span~a::before,
+            a~a::before {
+                content: '|';
+                margin-left: 0.5em;
+                margin-right: 0.7em;
+            }
+        }
+    }
+}
