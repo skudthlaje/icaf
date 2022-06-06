@@ -27,3 +27,34 @@ $(document).ready(function() {
     }, 50);
     */
 });
+
+/*  6/1/22 - Lets change the world */
+
+	var timer = setInterval( 'toggleImage();',3000);
+	function stop()
+	{
+		clearInterval(timer);
+	}
+
+	var imageDisplayed = 'us-mural';
+	function toggleImage()
+	{
+	
+	    
+	    var image = document.getElementById("USmural");	   
+	
+	    if (imageDisplayed == 'us-mural')
+		{
+			image.src='resource/image/world-mural.png';
+			imageDisplayed='world-mural';
+		}
+	    else
+		{
+			image.src='resource/image/us-mural.png';
+			imageDisplayed='us-mural';
+			
+		}	   
+
+	} //end function toggleImage
+
+// end - Lets change the world

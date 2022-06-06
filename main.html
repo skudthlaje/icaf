@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/icaf-main.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/icaf-main.css" /> 
     <!-- <link rel="stylesheet" href="css/icaf-main.css.map" /> -->
     <script src="js/jquery-3.3.1.slim.min.js" defer></script>
     <script src="js/popper.min.js" defer></script>
@@ -11,10 +11,11 @@
     <script src="js/bootstrap.js" defer></script>
     <!-- <script src="js/bootstrap.bundle.min.js" defer></script> -->
     <script src="js/icaf-main.js" defer></script>
+    <script type="text/javascript" src ="js/icaf-main.js" > </script>	    
 </head>
 
 
-<body>
+<body onUnload="stop();" >
     <div class="container">
         <!-- Fixed Nav -->
         <nav>
@@ -26,10 +27,36 @@
         <div class="row welcome">
         </div>
 
-        <!--Let's Change the World -->
-        <div class="row us-mural">
-        </div>
+        <!-- Let's Change the World --> 	
+        <div class="row">            
+            	<div class="column left" id="mural">
+                    	<img id="USmural" src="resource/image/us-mural.png"  alt="USA Mural" />			
+                </div>
+           	
+		<div class="column right" id="muralText">
+                
+                        <span >
+				<h4 id="muralTextTitle" >LET'S CHANGE THE WORLD!   
+		 		</h4>
+		  	   	<ul >
+                           	<li>Empower students through the Arts Olympiad to overcome the well-documented "fourth-grade slump" in their creativity and reduce obesity risk.</li>
+			   	<li>Help shape the future at the 7th World Children's Festivial across the U.S. Capitol in June/July 2024. </li>
+			   	<li>Subscribe to ChildArt magazine to foster children's creative and empathic development and awaken your own inner-child.</li>
+			    	<li>Support children's creative expressions by hosting an interactive exhibition at your headquarters. </li>
+			    	<li>Help transform our wounded world into a wondrous one with a tax-deductible contribution. </li>
+		  	    	</ul>	
+					
+				<div class="donate"> 
+			    	    <a id="donateLink" href="#noLink"> DONATE 
+				    </a>				
+				</div>
+				 
+                        </span>
+                    </div>		 
 
+        </div>        
+        <!--   END: Lets change the world  -->
+        
         <!-- Carousel -->
         <div class="row carousel-wrapper">
         </div>
